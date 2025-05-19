@@ -1,0 +1,277 @@
+vim clase4.txt
+ls
+sudo useradd franco
+cat /etc/passwd
+sudo passwd franco
+cd Descargas/
+mkdir miDirectorio
+ls
+rm miDirectorio/
+rm -r miDirectorio/
+ls
+touch miArchivo
+ls
+rm miArchivo 
+ls
+cd ..
+cd De
+cd Descargas/
+vim miArchiv
+ls
+vim miArchivo
+ls
+cat miArchivo 
+git init 
+git clone https://github.com/Franco-vilas2/Ejemplo-Utn.git
+cd ..
+sudo apt git
+cd descargas
+pwd
+cd /
+pwd
+mkdir -p puntoB/{Grupo1,Grupo2,Otro}
+sudo mkdir -p puntoB/{Grupo1,Grupo2,Otro}
+ls
+sudo apt update
+ls
+sudo apt update
+sudo apt install tree
+sudo apt-get update
+sudo software-properties-gtk
+pwd
+sudo mkdir -p puntoB/{Grupo1,Grupo2,otro}
+ls
+sudo apt update
+cd documentos
+cd puntoB
+cd..
+cd.
+cd..
+cd ..
+tree puntoB/
+sudo groupadd parc1_grupo1
+sudo groupadd parc1_grupo2
+sudo useradd -m -s /bin/bash -G parc1_grupo1 parc1_user1 
+sudo passwd parc1_user1
+sudo useradd -m -s /bin/bash -G parc1_grupo2 parc1_user2
+sudo passwd parc1_user2
+cat /etc/passwd
+cat /etc/group
+sudo cat /etc/shadow
+ h�º ªºqº ºººººªºª=)(/
+pwd
+ls
+userdel -r parc1_user1
+sudo userdel -r parc1_user1
+cat /etc/passwd
+user del -r parc1_user1
+sudo user del -r parc1_user1
+clear
+pwd
+ls
+cd puntoB
+ls
+cd..
+cd ..
+pwd
+clear
+sudo cat /etc/shadow
+sudo grep parc1_user1 /etc/shadow
+sudo grep parc1_user1 /etc/shadow | awk ':' '{print$2}' 
+sudo grep parc1_user1 /etc/shadow | awk -F ':' '{print$2}' 
+sudo useradd -m -s /bin/bash -p $(sudo grep parc1_user1 /etc/shadow | awk -F ':' '{print$2}') parc1_user3
+cat /etc/passwd
+sudo cat /etc/shadow
+cd home/
+ls
+cd puntoB/
+ls -l
+sudo chown parc1_user1:parc1_grupo1 Grupo1
+ls -l
+sudo chown parc1_user2:parc1_grupo2 Grupo2
+ls -l
+sudo chown parc1_user3:parc1_user3 otro/
+ls -l
+sudo chmod 770 Grupo1
+ls -l
+sudo chmod 765 Grupo2
+ls -l
+sudo chmod 751 otro/
+ls-l
+sudo chmod 741 otro/
+sudo chmod 754 otro/
+ls -l
+su -c "whoami >> otro/validar.txt" parc1_user3
+sudo groupadd parc1_grupo_todos
+sudo usermod -G parc1_grupo_todos parc1_user1
+sudo usermod -G parc1_grupo_todos parc1_user2
+sudo usermod -G parc1_grupo_todos parc1_user3
+cat /etc/group
+sudo chown -R :parc1_grupo_todos otro
+ls -l
+sudo chmod-R g+W otro/
+sudo chmod -R g+W otro/
+sudo chmod -R g+w otro/
+ls -l
+su -c "ls -l Grupo2" parc1_user3
+su -c "whoami>>otro/validar.txt" parc1_user1
+su -c "whoami>>otro/validar.txt" parc1_user2
+su -c "whoami>>Grupo2/existe.txt" parc1_user2
+su -c "ls -l Grupo2" parc1_user3
+sudo chmod o-x otro/
+su -c "ls -l Grupo2" parc1_user3
+sudo chmod o-x Grupo2/
+su -c "ls -l Grupo2" parc1_user3
+su -c "cat Grupo2/existe.txt" parc1_user3
+pwd
+cd $HOME
+pwd
+mkdir -p ejercicio_D/{libros,muscia,peliculas}/autores{1..5}
+tree ejercicio_D/
+echo "mkdir -p ejercicio_D/{libros,muscia,peliculas}/autores{1..5}" > puntoC.txt
+cat punto.txt
+cat puntoC.txt
+mkdir -p ejercicio_E/{correo/carteros{1..10},{emisor,receptor}/{cartas,cheques}}
+tree ejercicio_E
+mkdir punto_E
+ls -l
+cat /proc/cpuinfo
+grep "model name" /proc/cpuinfo
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}'
+
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}'
+grep "model name" /proc/cpuinfo
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}' | head -n1 
+
+
+
+
+
+
+grep "model name" /proc/cpuinfo
+grep "model name" /proc/cpuinfo
+
+wq
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}' | head -n1 
+grep "model name" /proc/cpuinfo
+wq
+grep "model name" /proc/cpuinfo 
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}' | head -n1 >> punto_E/modelo.txt
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}' | head -n1 >> punto_E/modelo.txt
+cat punto_E/modelo.txt
+grep "model name" /proc/cpuinfo | awk -F ':'{print$2}' | head -n1 >> punto_E/modelo.txt
+grep "model name" /proc/cpuinfo | gawk -F ':'{print$2}' | head -n1 >> punto_E/modelo.txt
+nproc
+nproc >> punto_E/procesadores.txt
+cat punto_E/procesadores.txt
+mkdir punto_F
+ls -l
+whoami
+cat /etc/passwd
+grep fvilas /etc/passwd | awk -F ':' '{print$7}'
+sudo grep fvilas  /etc/shadow | awk -F ':' '{print$2}'
+cat << FIN >> punto_F/info_usuario.txt
+Usuario = $(whoami)
+Whell = $ (grep fvilas /etc/passwd | awk -F ':' '{print$7}')
+Clave = $ (sudo grep fvilas  /etc/shadow | awk -F ':' '{print$2}')
+FIN
+
+cat punto_F/info_usuario.txt
+cat << FIN >> punto_F/info_usuario.txt
+Usuario = $(whoami)
+Whell = $ (grep fvilas /etc/passwd | awk -F ':' '{print$7}')
+Clave = $ (sudo grep fvilas  /etc/shadow | awk -F ':' '{print$2}')
+FIN
+
+cat << EOF >> punto_F/info_usuario.txt
+Usuario = $(whoami)                                                                       Shell = $ (grep fvilas /etc/passwd | awk -F ':' '{print$7}')
+Clave = $ (sudo grep fvilas  /etc/shadow | awk -F ':' '{print$2}')
+FIN
+
+echo "Usuario = $(whoami)"
+echo "Shell = $(grep fvilas /etc/passwd | awk -F ':' '{print$7}')
+echo "Clave = $(sudo grep fvilas  /etc/shadow | awk -F ':' '{print$2}') 
+FIN
+FIN
+
+
+
+FIN
+EOF
+
+cat punto_F/info_usuario.txt 
+history >Punto_F/ historial_$(date + "%Y%m%d_%H%M").txt
+history > Punto_F/ historial_$(date + "%Y%m%d_%H%M").txt
+history > punto_F/ historial_$(date + "%Y%m%d_%H%M").txt
+history > punto_F/historial_$(date +"%Y%m%d_%H%M").txt
+cd punto_F/
+ls
+sudo dnf install git
+git init
+git main
+git config --global init.defaultBranch init
+git init
+git clone https://github.com/Franco-vilas2/TP_AySO.git 
+cd Desktop
+sudo cd Desktop
+dnf5 search github-desktop
+ls
+cd Escritorio/
+git clone
+git clone https://github.com/Franco-vilas2/TP_AySO.git 
+cd TP
+_
+cd TP_AySO/
+cd ..
+cd TP_AySO/
+ls -l
+cat /etc/os-release
+grep HOME_URL/etc/os-release
+man grep
+cat /etc/os-release
+grep home_url /etc/os-release
+grep home_url/etc/os-release
+grep HOME_URL /etc/os-release
+grep VERSION /etc/os-release
+grep VERSION /etc/os-release > datos_url.txt
+cat datos_url.txt
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git config --global user.email "francovilas24@gmail.com"
+git config --global user.name "Franco-vilas2"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+/proc/cpuinfo
+cat /proc/cpuinfo
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+cat datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "feat: Añadiendo informacion de CPU
+git commit -m "feat: Añadiendo informacion de CPU"
+cat << EOF >> README.md
+Alumno:Franco Vilas
+Division: 117
+Turno: Mañana
+EOF
+
+git add README.md datos_usuario.txt
+git commit -m "ADD:Añadiendo Readme y datos de usuario"
+git push
+sudo dnf update
+mkdir -p /materia{1,2}/uni{1..3}
+sudo mkdir -p /materia{1,2}/uni{1..3}
+tree /materia
+tree /materia1 /materia2
+echo "sudo mkdir -p /materia{1,2}/uni{1..3}" > script_dir.sh
+sudo chmod 100 script_dir.sh
+git add script_dir.sh
+git add .
+sudo chmod 700 script_dir.sh
+git add .
+git commit -m "ADD: añadiendo script"
+git push
+history -a
